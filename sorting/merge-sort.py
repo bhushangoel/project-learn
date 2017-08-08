@@ -1,3 +1,11 @@
+'''
+Merge Sort:
+1. In this the given list is divided into 2 parts by finding the mid of list
+2. left and right part of the list is further divided into 2 parts using mid position using recursion
+3. we repeat step 1 and 2 till length of the list is less than 2, than we return the list and pass it to merge method, 
+which than sort the list
+'''
+
 def merge(left, right, arr):
     # print('here :', left, right, arr)
     nl = len(left)

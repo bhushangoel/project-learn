@@ -1,3 +1,12 @@
+'''
+Quick Sort:
+This is same as that of merge sort, only difference is that in this technique instead of dividing the list into two parts
+using mid position, we select first or last element from the list called PIVOT and than create the list in such a way 
+that element smaller than the PIVOT are on the left side of it and elements greater than PIVOT are on the right side of 
+the PIVOT. We than repeat the same process on the left and right side till we get the sorted list
+'''
+
+
 def partition(A, start, end):
     pivot = A[end]
     pIdx = start

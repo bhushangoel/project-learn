@@ -1,3 +1,16 @@
+'''
+Bubble sort:
+In bubble sort, each element is compared with its adjecent element. If the first element is higher than the second element
+than their positions gets swapped, than it gets compared with the next element and same process is repeated for all items
+in array. During this pass largest element occupies the last position.
+This process is than repeated and now second largest element occupies second last position.
+We repeat this till our array becomes sorted
+
+Analysis:
+O(n^2)
+'''
+
+
 def bubblesort(lst):
     i = 0
     size = len(lst)

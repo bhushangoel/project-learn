@@ -7,7 +7,8 @@ This process is than repeated and now second largest element occupies second las
 We repeat this till our array becomes sorted
 
 Analysis:
-O(n^2)
+Best case : O(n^2)
+Best case(Improved version) : O(n)
 '''
 
 

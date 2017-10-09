@@ -113,13 +113,23 @@ class LinkedList:
     def reverse(self):
         curr = self.head
         prev = None
-        while curr.next:
+        while curr:
+            next = curr.next
             curr.next = prev
             prev = curr
             curr = next
 
-        self.head = curr
+        self.head = prev
 
+    def reverseList(self):
+        curr = self.head
+        prev = None
+        while curr:
+            curr.next = prev
+            prev = curr
+            curr = curr.next
+
+        self.head = curr
 
 if __name__ == '__main__':
     l = LinkedList()
@@ -133,24 +143,28 @@ if __name__ == '__main__':
     second.next = third
 
     l.printList()
-    print('--------adding in beginning---------')
-    l.addStart(7)
-    l.printList()
-    print('--------adding at end---------')
-    l.addEnd(32)
-    l.printList()
-    print('--------adding at nth pos---------')
-    l.addAtNthPos(15, 2)
-    l.printList()
-    print('--------adding at sorted pos---------')
-    l.addAtSortedPos(22)
-    l.printList()
-    print('--------delete from beginning---------')
-    l.deleteFromBegining()
-    l.printList()
-    print('--------delete from end---------')
-    l.deleteFromEnd()
-    l.printList()
-    print('--------search item---------')
-    l.searchItem(23)
+    # print('--------adding in beginning---------')
+    # l.addStart(7)
+    # l.printList()
+    # print('--------adding at end---------')
+    # l.addEnd(32)
+    # l.printList()
+    # print('--------adding at nth pos---------')
+    # l.addAtNthPos(15, 2)
+    # l.printList()
+    # print('--------adding at sorted pos---------')
+    # l.addAtSortedPos(22)
+    # l.printList()
+    # print('--------delete from beginning---------')
+    # l.deleteFromBegining()
+    # l.printList()
+    # print('--------delete from end---------')
+    # l.deleteFromEnd()
+    # l.printList()
+    # print('--------search item---------')
+    # l.searchItem(23)
+    # l.printList()
+
+    print('--------reverse list---------')
+    l.reverse()
     l.printList()

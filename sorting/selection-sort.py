@@ -3,7 +3,6 @@ Selection Sort:
 In this we selects the minimum/maximum element value from the array and replaces it with first or last element respectively
 '''
 
-
 def selectionSort(lst):
     i = 0
     size = len(lst)

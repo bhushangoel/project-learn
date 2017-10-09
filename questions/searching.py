@@ -20,9 +20,6 @@ def generateCombinations(lst):
         i += 1
 
 
-
-
-
 # threeItemSum([5, 3, 8, 9, 1, 4, 2], 7)
 
 def threeItemSum(lst, k):
@@ -54,6 +51,8 @@ def threeItemSum(lst, k):
         i += 1
 
     print('result', arr)
+
+
 # generateCombinations([1, 2, 3, 4, 5, 6])
 
 
@@ -219,4 +218,36 @@ def pair1(l1, l2, value):
                 j += 1
         i += 1
 
-# pair1(l1, l2, value)
+        # pair1(l1, l2, value)
+
+
+def arrangeBinary(arr, size):
+    left, right = 0, size - 1
+
+    while left < right:
+        # Increment left index while we see 0 at left
+        while arr[left] == 0 and left < right:
+            left += 1
+
+        # Decrement right index while we see 1 at right
+        while arr[right] == 1 and left < right:
+            right -= 1
+
+        # If left is smaller than right then there is a 1 at left
+        # and a 0 at right. Exchange arr[left] and arr[right]
+        if left < right:
+            arr[left] = 0
+            arr[right] = 1
+            left += 1
+            right -= 1
+
+    return arr
+
+
+print(arrangeBinary([0, 1, 0, 1, 0, 1, 0], 7))
+
+'''
+https://www.quora.com/anonymous/b20f4383383b495f95875c86a1abfc62
+
+I have 4 years of experience in IT industry, till now I am only able to solve basic problems. I don't have any idea about DS and algo, now I want to learn them but I have no idea that from where should I start. I have read many blogs in which people mentioned that just solve the practice problems. But whenever I try to solve I failed to think about the logic and than I become demotivated. Can some one help me in this regard, whether I should read about DS and algo first and then start solving problems ?
+'''
